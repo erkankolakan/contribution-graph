@@ -82,7 +82,7 @@ total = f'<text x="12" y="22" class="ttl" dominant-baseline="middle">{D["total"]
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{D["total"]} GitHub contributions in the last year, as a skyline">
 <style>
 {palette_css(PAL)}
-text{{font:12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:{FG}}}.ttl{{font-weight:600;font-size:13px}}.ln{{stroke:{MUTED}}}
+text{{font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:{FG}}}.ttl{{font-weight:600;font-size:16px}}.ln{{stroke:{MUTED}}}
 .b{{transform-box:fill-box;transform-origin:50% 100%;animation:grow .7s cubic-bezier(.22,1,.36,1) both}}
 .lbl,.ttl{{opacity:0;animation:fade .5s ease 2.4s forwards}}.ttl{{animation-delay:.2s}}
 @keyframes grow{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}

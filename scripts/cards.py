@@ -42,10 +42,10 @@ for i, lv in enumerate(recent):
 
 header = svg(170, "Erkan Kolakan, Full Stack Developer",
              ".c{opacity:0;animation:pop .5s ease forwards}@keyframes pop{to{opacity:1}}",
-             f'''<text class="a mono u" x="0" y="32" font-size="14"{delay(0)}>~/{escape(D["user"])}</text>
+             f'''<text class="a mono u" x="0" y="32" font-size="16"{delay(0)}>~/{escape(D["user"])}</text>
 <text class="u" x="0" y="86" font-size="46" font-weight="700" letter-spacing="-1.2"{delay(0.1)}>Erkan Kolakan</text>
-<text class="m u" x="0" y="122" font-size="18"{delay(0.2)}>Full Stack Developer — building web &amp; mobile apps with React Native.</text>
-<text class="m u" x="0" y="156" font-size="14"{delay(0.3)}>Founder of <tspan fill="{FG}" font-weight="600">Flabex</tspan><tspan class="a">  ·  </tspan>Hackathon winner, 1st &amp; 2nd<tspan class="a">  ·  </tspan>Based in Turkey</text>
+<text class="m u" x="0" y="122" font-size="22"{delay(0.2)}>Full Stack Developer · React Native, web &amp; mobile</text>
+<text class="m u" x="0" y="158" font-size="17"{delay(0.3)}>Founder of <tspan fill="{FG}" font-weight="600">Flabex</tspan><tspan class="a">  ·  </tspan>Hackathon winner, 1st &amp; 2nd<tspan class="a">  ·  </tspan>Based in Turkey</text>
 {"".join(cells)}''')
 
 # ---------- stats ----------
@@ -67,8 +67,8 @@ stats = [(f"{max(counts)}", "best day"), (f"{longest}", "longest streak, days"),
 cols = []
 for i, (num, label) in enumerate(stats):
     x = i * W / 4
-    cols.append(f'<g class="u"{delay(0.1 * i)}><text x="{x:.0f}" y="38" font-size="34" font-weight="700" letter-spacing="-0.8">{num}</text>'
-                f'<text class="m" x="{x:.0f}" y="62" font-size="13">{label}</text></g>')
+    cols.append(f'<g class="u"{delay(0.1 * i)}><text x="{x:.0f}" y="42" font-size="40" font-weight="700" letter-spacing="-0.8">{num}</text>'
+                f'<text class="m" x="{x:.0f}" y="68" font-size="16">{label}</text></g>')
 
 langs = D.get("langs", [])
 total = sum(l["size"] for l in langs) or 1
@@ -78,18 +78,18 @@ parts = [(l["name"], l["color"], l["size"]) for l in top] + ([("Other", MUTED, o
 bar, legend, x, lx = [], [], 0.0, 0.0
 for i, (name, color, size) in enumerate(parts):
     w = W * size / total
-    bar.append(f'<rect class="g" x="{x:.1f}" y="92" width="{max(0, w - 2):.1f}" height="8" fill="{color}"{delay(0.4 + 0.08 * i)}/>')
+    bar.append(f'<rect class="g" x="{x:.1f}" y="94" width="{max(0, w - 2):.1f}" height="10" fill="{color}"{delay(0.4 + 0.08 * i)}/>')
     x += w
     label = f"{name} {100 * size / total:.1f}%"
-    legend.append(f'<g class="u"{delay(0.6 + 0.06 * i)}><circle cx="{lx + 5:.0f}" cy="128" r="5" fill="{color}"/>'
-                  f'<text class="m" x="{lx + 16:.0f}" y="133" font-size="13">{escape(label)}</text></g>')
-    lx += 36 + len(label) * 7.2
+    legend.append(f'<g class="u"{delay(0.6 + 0.06 * i)}><circle cx="{lx + 5:.0f}" cy="132" r="6" fill="{color}"/>'
+                  f'<text class="m" x="{lx + 16:.0f}" y="138" font-size="16">{escape(label)}</text></g>')
+    lx += 34 + len(label) * 8.6
 
-stats_svg = svg(150, "GitHub stats and most used languages",
+stats_svg = svg(156, "GitHub stats and most used languages",
                 ".g{transform-box:fill-box;transform-origin:0 50%;animation:grow .8s cubic-bezier(.22,1,.36,1) both}"
                 "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}",
                 f'''{"".join(cols)}
-<clipPath id="r"><rect x="0" y="92" width="{W}" height="8" rx="4"/></clipPath>
+<clipPath id="r"><rect x="0" y="94" width="{W}" height="10" rx="5"/></clipPath>
 <g clip-path="url(#r)">{"".join(bar)}</g>
 {"".join(legend)}''')
 

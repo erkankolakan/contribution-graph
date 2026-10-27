@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img" aria-label="843 GitHub contributions in the last year, as a skyline">
 <style>
 .f0{fill:#ebedf0}.t0{fill:#eff1f3}.s0{fill:#c1c2c5}.f1{fill:#9be9a8}.t1{fill:#b1eebb}.s1{fill:#7fbf8a}.f2{fill:#40c463}.t2{fill:#6ad185}.s2{fill:#34a151}.f3{fill:#30a14e}.t3{fill:#5eb675}.s3{fill:#278440}.f4{fill:#216e39}.t4{fill:#528e65}.s4{fill:#1b5a2f}
-text{font:12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#1f2328}.ttl{font-weight:600;font-size:13px}.ln{stroke:#656d76}
+text{font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#1f2328}.ttl{font-weight:600;font-size:16px}.ln{stroke:#656d76}
 .b{transform-box:fill-box;transform-origin:50% 100%;animation:grow .7s cubic-bezier(.22,1,.36,1) both}
 .lbl,.ttl{opacity:0;animation:fade .5s ease 2.4s forwards}.ttl{animation-delay:.2s}
 @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
